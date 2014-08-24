@@ -10,6 +10,11 @@ find_package( Boost COMPONENTS system chrono REQUIRED )
 find_package( OpenCL REQUIRED )
 find_package( OpenGL REQUIRED )
 
+find_package(GLEW REQUIRED)
+include_directories(${GLEW_INCLUDE_DIR})
+include_directories(${GLEW_INCLUDE_PATH})
+
+
 set(OpenCLUtilityLibrary_INCLUDE_DIRS
     ${OpenCLUtilityLibrary_SOURCE_DIR}
     ${OpenCLUtilityLibrary_SOURCE_DIR}/CL
@@ -51,6 +56,7 @@ set(OpenCLUtilityLibrary_LINK_LIBRARIES
     ${Boost_LIBRARIES}
     ${OPENCL_LIBRARIES}
     ${OPENGL_LIBRARIES}
+    ${GLEW_LIBRARY}
 )
 
 message("-boost libs ${Boost_LIBRARIES}")

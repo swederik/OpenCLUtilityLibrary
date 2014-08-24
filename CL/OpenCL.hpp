@@ -3,6 +3,7 @@
 
 #define CL_USE_DEPRECATED_OPENCL_1_1_APIS
 #define __CL_ENABLE_EXCEPTIONS
+#include <GL/glu.h>
 #include "CL/cl.hpp"
 
 
